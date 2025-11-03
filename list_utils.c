@@ -6,7 +6,7 @@
 /*   By: angrios <angrios@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/05 19:17:48 by angrios           #+#    #+#             */
-/*   Updated: 2025/10/28 17:22:17 by angrios          ###   ########.fr       */
+/*   Updated: 2025/11/03 15:24:59 by angrios          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,4 +56,11 @@ int	peek_node(t_node *stack, int *out_value)
 		return (0);
 	*out_value = stack->node_data.stack_value;
 	return (1);
+}
+
+int	is_empty(t_node *stack)
+{
+	if (stack == NULL)
+		return (1);
+	return (0);
 }
