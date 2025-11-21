@@ -1,16 +1,24 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: angrios <angrios@student.42madrid.com>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/11/21 19:25:19 by angrios           #+#    #+#             */
+/*   Updated: 2025/11/21 19:25:21 by angrios          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 # include "libft.h"
-
-typedef struct	s_stack
-{
-	int	stack_value;
-} t_stack;
+# include <stdlib.h>
 
 typedef struct	s_node
 {
-	t_stack			node_data;
-	struct s_node	*next_node;
+	int				value;
+	struct s_node	*next;
 } t_node;
 
 t_node	*create_node(int value);
