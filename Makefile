@@ -6,7 +6,7 @@
 #    By: angrios <angrios@student.42madrid.com>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/04 12:21:04 by angrios           #+#    #+#              #
-#    Updated: 2025/11/04 17:16:53 by angrios          ###   ########.fr        #
+#    Updated: 2025/11/21 19:33:08 by angrios          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,9 +20,10 @@ OBJ_DIR	= obj
 SRC_DIR	= .
 
 SRC		= list_utils.c \
+			actions.c \
 			push_swap.c
 
-OBJ		= $(addprefix $(OBJ_DIR)/, $(SRC:.c=.o))
+OBJ		= $(SRC:%.c=$(OBJ_DIR)/%.o)
 
 all: $(LIBFT) $(OBJ_DIR) $(NAME)
 
@@ -40,9 +41,7 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 	@$(CC) $(CFLAGS) -I. -Ilibft -c $< -o $@
 
 clean:
-	$(call CLEAN_PROJECT)
 	@$(RM) -r $(OBJ_DIR)
-	@$(MAKE) -C libft clean --no-print-directory
 
 fclean: clean
 	@$(RM) $(NAME)
