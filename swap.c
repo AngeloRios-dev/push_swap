@@ -6,7 +6,7 @@
 /*   By: angrios <angrios@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/20 20:08:37 by angrios           #+#    #+#             */
-/*   Updated: 2025/11/25 14:57:22 by angrios          ###   ########.fr       */
+/*   Updated: 2025/11/25 15:05:24 by angrios          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	sa(t_node **stack_a, int print)
 
 	res = swap(stack_a);
 	if (print && res)
-		ft_printf("sa");
+		ft_printf("sa\n");
 	return (res);
 }
 
@@ -40,7 +40,7 @@ int	sb(t_node **stack_b, int print)
 
 	res = swap(stack_b);
 	if (print && res)
-		ft_printf("sb");
+		ft_printf("sb\n");
 	return (res);
 }
 
@@ -48,6 +48,6 @@ int	ss(t_node **stack_a, t_node **stack_b)
 {
 	swap(stack_a);
 	swap(stack_b);
-	ft_printf("ss");
+	ft_printf("ss\n");
 	return (1);
 }
