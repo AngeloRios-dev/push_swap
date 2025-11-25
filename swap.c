@@ -6,13 +6,13 @@
 /*   By: angrios <angrios@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/20 20:08:37 by angrios           #+#    #+#             */
-/*   Updated: 2025/11/25 14:54:59 by angrios          ###   ########.fr       */
+/*   Updated: 2025/11/25 14:57:22 by angrios          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static int swap(t_node **stack)
+static int	swap(t_node **stack)
 {
 	int	tmp;
 
