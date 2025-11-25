@@ -6,38 +6,48 @@
 /*   By: angrios <angrios@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/20 20:08:37 by angrios           #+#    #+#             */
-/*   Updated: 2025/11/21 19:58:56 by angrios          ###   ########.fr       */
+/*   Updated: 2025/11/25 14:54:59 by angrios          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	sa(t_node **stack_a)
+static int swap(t_node **stack)
 {
 	int	tmp;
 
-	if (!stack_a || !*stack_a || !(*stack_a)->next)
+	if (!stack || !*stack || !(*stack)->next)
 		return (0);
-	tmp = (*stack_a)->value;
-	(*stack_a)->value = (*stack_a)->next->value;
-	(*stack_a)->next->value = tmp;
-	ft_printf("sa\n");
+	tmp = (*stack)->value;
+	(*stack)->value = (*stack)->next->value;
+	(*stack)->next->value = tmp;
 	return (1);
 }
 
-int	sb(t_node **stack_b)
+int	sa(t_node **stack_a, int print)
 {
-	int	tmp;
-	if (!stack_b || !*stack_b || !(*stack_b)->next)
-		return (0);
-	tmp = (*stack_b)->value;
-	(*stack_b)->value = (*stack_b)->next->value;
-	(*stack_b)->next->value = tmp;
-	ft_printf("sb\n");
-	return (1);
+	int	res;
+
+	res = swap(stack_a);
+	if (print && res)
+		ft_printf("sa");
+	return (res);
+}
+
+int	sb(t_node **stack_b, int print)
+{
+	int	res;
+
+	res = swap(stack_b);
+	if (print && res)
+		ft_printf("sb");
+	return (res);
 }
 
 int	ss(t_node **stack_a, t_node **stack_b)
 {
-
+	swap(stack_a);
+	swap(stack_b);
+	ft_printf("ss");
+	return (1);
 }
