@@ -6,7 +6,7 @@
 /*   By: angrios <angrios@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/28 18:09:01 by angrios           #+#    #+#             */
-/*   Updated: 2025/11/28 19:34:20 by angrios          ###   ########.fr       */
+/*   Updated: 2025/11/28 19:37:20 by angrios          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ int	rrb(t_node **stack_b, int print)
 	res = aux_reverse_rotate(stack_b);
 	if (res && print)
 		ft_printf("rrb\n");
-	return (1);
+	return (res);
 }
 
 int	rrr(t_node **stack_a, t_node **stack_b)
@@ -58,5 +58,5 @@ int	rrr(t_node **stack_a, t_node **stack_b)
 	b = aux_reverse_rotate(stack_b);
 	if (a || b)
 		ft_printf("rrr\n");
-	return (1);
+	return (a || b);
 }
