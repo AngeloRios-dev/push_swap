@@ -6,7 +6,7 @@
 /*   By: angrios <angrios@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/21 19:25:19 by angrios           #+#    #+#             */
-/*   Updated: 2025/11/21 19:25:21 by angrios          ###   ########.fr       */
+/*   Updated: 2025/11/28 19:32:34 by angrios          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,22 @@
 # include "libft.h"
 # include <stdlib.h>
 
-typedef struct	s_node
+typedef struct s_node
 {
 	int				value;
 	struct s_node	*next;
-} t_node;
+}	t_node;
 
 t_node	*create_node(int value);
 int	push_node(t_node **stack, t_node *new_node);
 int	pop_node(t_node **stack, int *out_value);
 int	peek_node(t_node *stack, int *out_value);
 int	is_empty(t_node *stack);
+int	ra(t_node **stack_a, int print);
+int	rb(t_node **stack_b, int print);
+int	rr(t_node **stack_a, t_node **stack_b);
+int	rra(t_node **stack_a, int print);
+int	rrb(t_node **stack_b, int print);
+int	rrr(t_node **stack_a, t_node **stack_b);
 
 #endif
