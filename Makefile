@@ -6,7 +6,7 @@
 #    By: angrios <angrios@student.42madrid.com>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/04 12:21:04 by angrios           #+#    #+#              #
-#    Updated: 2025/11/21 19:39:18 by angrios          ###   ########.fr        #
+#    Updated: 2025/11/28 19:40:44 by angrios          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,9 @@ SRC_DIR	= .
 
 SRC		= list_utils.c \
 			swap.c \
+			rotate.c \
+			reverse_rotate.c \
+			push.c \
 			push_swap.c
 
 OBJ		= $(SRC:%.c=$(OBJ_DIR)/%.o)
