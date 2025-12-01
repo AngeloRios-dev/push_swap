@@ -6,7 +6,7 @@
 /*   By: angrios <angrios@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/21 19:25:19 by angrios           #+#    #+#             */
-/*   Updated: 2025/11/28 19:42:44 by angrios          ###   ########.fr       */
+/*   Updated: 2025/12/01 16:26:00 by angrios          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define PUSH_SWAP_H
 # include "libft.h"
 # include <stdlib.h>
+# include <limits.h>
 
 typedef struct s_node
 {
