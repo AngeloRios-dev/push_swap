@@ -6,7 +6,7 @@
 /*   By: angrios <angrios@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/05 19:17:48 by angrios           #+#    #+#             */
-/*   Updated: 2025/11/21 19:27:02 by angrios          ###   ########.fr       */
+/*   Updated: 2025/12/05 19:18:42 by angrios          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,21 @@ int	push_node(t_node **stack, t_node *new_node)
 	new_node->next = *stack;
 	*stack = new_node;
 	return (1);
+}
+
+void	append_node(t_node **stack, t_node *new)
+{
+	t_node	*tmp;
+
+	if (!(*stack))
+	{
+		*stack = new;
+		return ;
+	}
+	tmp = *stack;
+	while (tmp->next)
+		tmp = tmp->next;
+	tmp->next = new;
 }
 
 int	pop_node(t_node **stack, int *out_value)
