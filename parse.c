@@ -6,17 +6,11 @@
 /*   By: angrios <angrios@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 16:24:46 by angrios           #+#    #+#             */
-/*   Updated: 2025/12/05 19:14:10 by angrios          ###   ########.fr       */
+/*   Updated: 2025/12/16 14:33:02 by angrios          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-static int	print_err(void)
-{
-	write(2, "Error\n", 6);
-	return (0);
-}
 
 static int	is_number(const char *str)
 {
@@ -91,17 +85,17 @@ int	parse_args(int argc, char **argv, t_node **stack_a)
 	while (i < argc)
 	{
 		if (!is_number(argv[i]))
-			return (print_err());
+			return (free_stack(stack_a, 1));
 		value = ft_atol(argv[i]);
 		if (value > INT_MAX || value < INT_MIN)
-			return (print_err());
+			return (free_stack(stack_a, 1));
 		new = create_node((int)value);
 		if (!new)
-			return (0);
+			return (free_stack(stack_a, 0));
 		append_node(stack_a, new);
 		i++;
 	}
 	if (has_duplicates(*stack_a))
-		return (print_err());
+		return (free_stack(stack_a, 1));
 	return (1);
 }

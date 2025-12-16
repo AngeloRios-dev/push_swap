@@ -6,7 +6,7 @@
 /*   By: angrios <angrios@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/21 19:25:19 by angrios           #+#    #+#             */
-/*   Updated: 2025/12/01 16:26:00 by angrios          ###   ########.fr       */
+/*   Updated: 2025/12/16 14:27:37 by angrios          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,7 @@ int		rr(t_node **stack_a, t_node **stack_b);
 int		rra(t_node **stack_a, int print);
 int		rrb(t_node **stack_b, int print);
 int		rrr(t_node **stack_a, t_node **stack_b);
+int		print_err(void);
+int		free_stack(t_node **stack, int print_error);
 
 #endif
